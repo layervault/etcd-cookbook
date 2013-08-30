@@ -28,7 +28,7 @@ if node[:etcd][:env_scope]
 end
 
 # return a string of comma sepparated  fqdn that doens't include this host
-cluster = partial_search(:node, query,
+cluster = search(:node, query,
   :keys => {
     'node' => ['fqdn']
   }
